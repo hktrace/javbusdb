@@ -28,3 +28,4 @@ pip install xlrd==1.2.0（安装2.2.1无法读取xlsx）
 打开functions_requests.py文件，搜索“这里修改成你自己的cookie”，F12抓cookie填入即可。不懂的自行谷歌或者百度找下相关教程
 
 
+![Example Image](https://raw.githubusercontent.com/hktrace/javbusdb/main/20240415.jpg)
