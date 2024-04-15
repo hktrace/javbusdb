@@ -160,9 +160,9 @@ def get_bus_html(url, proxy):
     for retry in range(10):
         try:
             if proxy:       # existmag=all为了 获得所有影片，而不是默认的有磁力的链接)
-                rqs = get(url, proxies=proxy, timeout=(6, 7), headers={'Cookie': 'existmag=mag; 4fJN_2132_ulastactivity=f7b8lPoRQVaJ05Oegxr4RyjxK0tSixsF6kVHQ1PJPBzr3DDXs85L; 4fJN_2132_lastcheckfeed=181749%7C1706993288; 4fJN_2132_auth=4ec8yzf%2F3ZR4GT6eT6aezg9cm4Q%2FSkbnt8a5p9ytDTQ8OIh3%2Bgz2Vbl7IeHAkEswsUaZREFszGuswq3zB5gGw2y8k7Q; 4fJN_2132_smile=4D1; PHPSESSID=aph8hjg733omsgi46j94cs8h42'})
+                rqs = get(url, proxies=proxy, timeout=(6, 7), headers={'Cookie': '这里修改成你自己的cookie'})
             else:
-                rqs = get(url, timeout=(6, 7), headers={'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7','Accept-Encoding': 'gzip, deflate','Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,nl;q=0.6','Cache-Control': 'max-age=0','Cookie': 'existmag=mag; 4fJN_2132_ulastactivity=f7b8lPoRQVaJ05Oegxr4RyjxK0tSixsF6kVHQ1PJPBzr3DDXs85L; 4fJN_2132_lastcheckfeed=181749%7C1706993288; 4fJN_2132_auth=4ec8yzf%2F3ZR4GT6eT6aezg9cm4Q%2FSkbnt8a5p9ytDTQ8OIh3%2Bgz2Vbl7IeHAkEswsUaZREFszGuswq3zB5gGw2y8k7Q; 4fJN_2132_smile=4D1; PHPSESSID=aph8hjg733omsgi46j94cs8h42','Referer': 'https://www.javbus.com/','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36'})
+                rqs = get(url, timeout=(6, 7), headers={'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7','Accept-Encoding': 'gzip, deflate','Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,nl;q=0.6','Cache-Control': 'max-age=0','Cookie': '这里修改成你自己的cookie','Referer': 'https://www.javbus.com/','User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36'})
         except:
             # print(format_exc())
             print('    >打开网页失败，重新尝试...')
@@ -353,7 +353,7 @@ def download_pic(url, path, proxy):
         'Accept-Encoding': 'gzip, deflate',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,nl;q=0.6',
         'Cache-Control': 'max-age=0',
-        'Cookie': 'existmag=mag; 4fJN_2132_ulastactivity=f7b8lPoRQVaJ05Oegxr4RyjxK0tSixsF6kVHQ1PJPBzr3DDXs85L; 4fJN_2132_lastcheckfeed=181749%7C1706993288; 4fJN_2132_auth=4ec8yzf%2F3ZR4GT6eT6aezg9cm4Q%2FSkbnt8a5p9ytDTQ8OIh3%2Bgz2Vbl7IeHAkEswsUaZREFszGuswq3zB5gGw2y8k7Q; 4fJN_2132_smile=4D1; PHPSESSID=aph8hjg733omsgi46j94cs8h42',
+        'Cookie': '这里修改成你自己的cookie',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36'
     }
     url = 'https://www.javbus.com'+url
