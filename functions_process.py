@@ -46,13 +46,12 @@ def find_num_bus(file_temp, list_suren_num):
         video_numg = search(r'(\d\d)ID[-_ ]*(\d\d+)', file_temp)
         jav_pref = video_numg.group(1) + 'ID-'
         jav_suf = video_numg.group(2)
-    elif search(r'\d*[A-Z]+[-_ ]*\d\d+', file_temp):
-        video_numg = search(r'(\d*[A-Z]+)[-_ ]*(\d\d+)', file_temp)
+    elif search(r'[A-Z]+[-_ ]*\d\d+', file_temp):
+        video_numg = search(r'([A-Z]+)[-_ ]*(\d\d+)', file_temp)
         jav_pref = video_numg.group(1)
-        # 排除确定的前缀列表
         if jav_pref in list_suren_num or jav_pref in ['HEYZO', 'PONDO', 'CARIB', 'OKYOHOT']:
             return ''
-        jav_pref += '-'
+        jav_pref = jav_pref + '-'
         jav_suf = video_numg.group(2)
     else:
         return ''
